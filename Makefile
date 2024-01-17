@@ -17,6 +17,10 @@ test:
 clean_example:
 	- rm example/**.pb.go
 	- rm example/**.proteus.go
+
+install: clean_example
+	- go install ./cli/proteus
+
 reinstall: clean_example
 	- rm `which proteus`
 	- go install ./cli/proteus
